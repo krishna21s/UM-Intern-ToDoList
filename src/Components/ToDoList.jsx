@@ -4,6 +4,7 @@ import ImmedTasks from './ImmedTasks.jsx';
 import WeeklyGoals from './WeeklyGoals.jsx';
 import DailyRoutine from './DailyRoutine.jsx';
 import AOS from 'aos';
+
 const ToDoList = () => {
   const [showLinks, setShowLinks] = useState(false);
   AOS.init({
@@ -20,12 +21,12 @@ const ToDoList = () => {
   return (
     <BrowserRouter>
       <div className="main hero">
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
         <div className="sub-main">
           <div className='nav d-flex align-items-center'>
             <div className="container d-flex align-items-center justify-content-center">
@@ -49,16 +50,22 @@ const ToDoList = () => {
             </div>
           </div>
           <Routes>
-            <Route path="/immediateTasks" element={<ImmedTasks />} />
-            <Route path="/daily-routine" element={<div><DailyRoutine /></div>} />
-            <Route path="/weekly-goals" element={<div><WeeklyGoals /></div>} />
-            <Route path="*" element={
+            <Route path="/" element={
               <div className='p-2  intro d-flex flex-column justify-content-center align-items-center '>
                 <h1 className='fs-2 intro-quote'>
                   "Tasks are the stepping stones to your goals — organize them,
                   prioritize them, and conquer them."
                 </h1>
                 <h1 className='p-4 fs-3'>Click Menu to add tasks</h1>
+              </div>} />
+            <Route path="/immediateTasks" element={<ImmedTasks />} />
+            <Route path="/daily-routine" element={<DailyRoutine />} />
+            <Route path="/weekly-goals" element={<WeeklyGoals />} />
+            <Route path="*" element={
+              <div className='p-2  intro d-flex flex-column justify-content-center align-items-center '>
+                <h1 className='fs-2 intro-quote'>
+                  "Page Not Found"
+                </h1>
               </div>} />
           </Routes>
         </div>
