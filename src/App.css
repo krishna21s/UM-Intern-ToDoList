@@ -1,0 +1,397 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar CSS and animations */
+.nav,
+.container {
+    height: 65px;
+    background-color: #000000;
+}
+
+.nav {
+    border: 7px solid;
+    border-image-source: linear-gradient(to right, #f00, rgb(0, 237, 0), #00f);
+    border-image-slice: 1;
+    animation: animate-border 2s infinite;
+}
+
+.intro {
+    height: 100vh;
+    text-align: justify;
+    color: rgb(136, 136, 136);
+}
+
+.menu-btn {
+    z-index: 1500;
+}
+
+@keyframes animate-border {
+    0% {
+        border-image-source: linear-gradient(to right, #f00, #0f0, #00f);
+    }
+
+    50% {
+        border-image-source: linear-gradient(to right, #ff0, #0ff, #f0f);
+    }
+
+    100% {
+        border-image-source: linear-gradient(to right, #f00, #0f0, #00f);
+    }
+}
+
+.btn-hover {
+    color: #fff;
+    cursor: pointer;
+    height: 45px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-6 {
+    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+.btn-hover.color-2 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+.btn-hover.color-9 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+/* end ----------------------end*/
+/* Background CSS and Animations */
+
+.hero {
+    background-color: #0040C1;
+    position: relative;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+.hero__title {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    z-index: 1;
+}
+
+.cube {
+    z-index: 0;
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #003298;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    -webkit-animation: cube 12s ease-in forwards infinite;
+    animation: cube 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
+    border-color: #0051f4;
+}
+
+.cube:nth-child(2) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+}
+
+.cube:nth-child(3) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+}
+
+.cube:nth-child(4) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+}
+
+.cube:nth-child(5) {
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+}
+
+.cube:nth-child(6) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+}
+
+@-webkit-keyframes cube {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+@keyframes cube {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+/* end ------------------ end */
+
+
+.main {
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.heading-txt {
+    color: white;
+    font-family: "Happy Monkey", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.nav-links {
+    background-color: black;
+}
+
+.nav-links .nav-btn {
+    width: 32vh;
+    text-wrap: wrap;
+    overflow: hdiden;
+    position: absolute;
+    right: 30px;
+    font-family: 'itim';
+    font-size: large;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode;: transform; */
+    /* transition: transform 0.3s linear; */
+    z-index: 1500;
+    text-decoration: none;
+    margin: 5px;
+    color: black;
+}
+
+.nav-links .nav-btn:hover {
+    /* transform: translateY(-10px); */
+    color: white;
+}
+
+.btn-1 {
+    top: 70px;
+}
+
+.btn-2 {
+    top: 120px;
+}
+
+.btn-3 {
+    top: 170px;
+}
+
+/* Add this to your CSS file */
+.animate {
+    animation: slideLeft 0.5s ease-in-out;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(12%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Imediate Tasks CSS */
+.list-numbered {
+    list-style-type: decimal;
+    /* list-style-position: inside; */
+}
+
+.list-numbered li::marker {
+    color: #000000;
+    /* Change the color to your desired value */
+}
+
+.text-justified {
+    text-align: justify;
+}
+
+.check-task input {
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+}
+
+.task {
+    font-size: large;
+}
+
+/* whether task is done or nor */
+.checked {
+    text-decoration: line-through;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-wrap {
+    word-break: break-all;
+}
+
+.custom-text-input {
+    background-color: rgb(155, 155, 157);
+}
+
+/* Add button Animations */
+
+.add-btn {
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 44px;
+    text-transform: capitalize;
+    text-decoration: none;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    box-sizing: border-box;
+    background: linear-gradient(90deg, yellow, orange, red, violet, purple, blue, yellow);
+    background-size: 400%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.add-btn:hover {
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.add-btn:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(45deg, #f15523, #ef3224, #7c3697);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5%;
+}
+
+.add-btn:hover:before {
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+
+
+/* Input text Modification */
+.input .input-text {
+    max-width: 500px;
+    position: relative;
+}
+
+.task {
+    color: white;
+}
+
+.custom-text-input .MuiOutlinedInput-input {
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    width: 500px;
+}
+
+.custom-text-input .MuiOutlinedInput-root.Mui-focused {
+    /* styles when input is focused */
+    border-color: #333;
+    box-shadow: 0 0 0 2px #333;
+}
+
+.custom-text-input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #333;
+}
+
+.custom-text-input .MuiOutlinedInput-input:focus {
+    /* styles when input is focused */
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    color: lightblue;
+}
+
+.custom-text-input .MuiInputLabel-root {
+    color: lightgray;
+    /* default label color */
+}
+
+.custom-text-input .MuiInputLabel-root.Mui-focused {
+    color: #ffffff;
+
+    /* label color when input is focused */
+}
+
