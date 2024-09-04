@@ -4,6 +4,7 @@ import ImmedTasks from './ImmedTasks.jsx';
 import WeeklyGoals from './WeeklyGoals.jsx';
 import DailyRoutine from './DailyRoutine.jsx';
 import AOS from 'aos';
+import { HashRouter as BrowserRouter } from 'react-router-dom';
 
 const ToDoList = () => {
   const [showLinks, setShowLinks] = useState(false);
