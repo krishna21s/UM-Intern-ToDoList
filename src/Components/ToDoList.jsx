@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes, Link, NavLink } from 'react-router-dom';
+import { Route, Routes, Link, NavLink } from 'react-router-dom';
 import ImmedTasks from './ImmedTasks.jsx';
 import WeeklyGoals from './WeeklyGoals.jsx';
 import DailyRoutine from './DailyRoutine.jsx';
 import AOS from 'aos';
-import { HashRouter as BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 const ToDoList = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -20,7 +20,7 @@ const ToDoList = () => {
   };
 
   return (
-    <BrowserRouter>
+    <Router>
       <div className="main hero">
         <div className="cube"></div>
         <div className="cube"></div>
@@ -65,7 +65,7 @@ const ToDoList = () => {
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 };
 
