@@ -50,7 +50,7 @@ const ToDoList = () => {
             </div>
           </div>
           <Routes>
-            <Route path="/" element={
+            <Route path="*" element={
               <div className='p-2  intro d-flex flex-column justify-content-center align-items-center '>
                 <h1 className='fs-2 intro-quote'>
                   "Tasks are the stepping stones to your goals — organize them,
@@ -61,12 +61,12 @@ const ToDoList = () => {
             <Route path="/immediateTasks" element={<ImmedTasks />} />
             <Route path="/daily-routine" element={<DailyRoutine />} />
             <Route path="/weekly-goals" element={<WeeklyGoals />} />
-            <Route path="*" element={
+            {/* <Route path="*" element={
               <div className='p-2  intro d-flex flex-column justify-content-center align-items-center '>
                 <h1 className='fs-2 intro-quote'>
                   "Page Not Found"
                 </h1>
-              </div>} />
+              </div>} /> */}
           </Routes>
         </div>
       </div>
