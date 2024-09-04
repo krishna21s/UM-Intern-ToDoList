@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Route, Routes, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link, NavLink } from 'react-router-dom';
 import ImmedTasks from './ImmedTasks.jsx';
 import WeeklyGoals from './WeeklyGoals.jsx';
 import DailyRoutine from './DailyRoutine.jsx';
-import { HashRouter as BrowserRouter } from 'react-router-dom';
 import AOS from 'aos';
 
 const ToDoList = () => {
